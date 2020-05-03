@@ -1,0 +1,541 @@
+@charset "UTF-8";
+
+/*共通部分*/
+.container{
+  max-width:980px;
+  margin:0 auto;
+}
+img{
+  width: 100%;
+}
+a{
+  text-decoration:none;
+}
+li{
+  list-style:none;
+}
+
+
+/*ヘッダー*/
+header{
+  background-color:rgba(228,230,235,0.9);
+  z-index:100;
+  position:fixed;
+  width: 100%;
+  padding:15px 0; 
+}
+header a{
+  color:#fff;
+}
+header .container{
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+}
+header ul{
+  display: flex;
+}
+header li{
+  font-size: 20px;
+  margin-right: 10px;
+}
+header p{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Mansalva', cursive;
+}
+
+
+/*メイン*/
+/*我輩は猫であるの所*/    
+.name{
+  padding:50px 0;
+}
+.name p:first-child{
+  font-size:30px;
+  font-weight:bold;
+  margin-left: 10px;
+  font-family:ヒラギノ明朝 Pro;
+}
+.name p:nth-child(n+2){
+  margin-top:50px;
+  padding:0 10px;
+  color:#333;
+  font-size:15px;
+}
+.name>p{
+  line-height:1.5em;
+}
+
+
+/*cat1*/
+.cat1{
+  background-color:#FCF6F2;
+  padding:50px 0;
+}
+.cat1 .container>p{
+  font-size:30px;
+  font-weight:bold;
+  text-align: center;
+  font-family:ヒラギノ明朝 Pro;
+  margin-bottom: 60px;
+}
+.image-text{
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+}
+.cat1 .container img{
+  width:80vw;
+  height:auto;
+  display: block;
+  margin:0 auto;
+  margin-bottom: 30px;
+}
+.image-text p{
+  width:80vw;
+  font-size:15px;
+  line-height:1.5em;
+  margin:0 auto;
+  margin-bottom: 30px;
+}
+.item1{
+  order:1;
+}
+.item2{
+  order:2;
+}
+.item4{
+  order:3;
+}
+.item3{
+  order:4;
+}
+.item5{
+  order:5;
+}
+.item6{
+  order:6;
+}
+
+
+/*cat2*/
+.cat2{
+  padding:50px 0;
+}
+.cat2 .container>p{
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: ヒラギノ明朝 Pro;
+}
+.left-right{
+  display:flex;
+  flex-direction:column;
+  max-width:850px;
+}
+.right img,.left img{
+  width:80vw;
+  display: block;
+  margin:0 auto;
+}
+.right p,.left p{
+  margin-top: 20px;
+  font-size:15px;
+  width: 80vw;
+  line-height:1.5em;
+  margin:20px auto;
+}
+.picture{
+  position:relative;
+}
+.picture>img{
+  width:100%;
+}
+.picture p{
+  display: none;
+}
+
+
+/*cat3*/
+.cat3{
+  padding:50px 0;
+}
+.cat3 .container>p{
+  text-align: center;
+  font-size:30px;
+  font-weight:bold;
+  font-family: ヒラギノ明朝 Pro;
+  margin-bottom: 50px;
+}
+.imformation{
+  border-top:1px solid #777;
+  padding:10px 0;
+  display: flex;
+  flex-wrap:wrap;
+  align-items:center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.imformation>p:first-child{
+  font-weight:bold;
+}
+.imformation>p:nth-child(2){
+
+  margin:0 37px 10px 16px;
+  line-height:16px;
+  height:16px;
+  padding:4px 26px 5px 26px;
+  border:1px solid #AD2727;
+  color:#AD2727;
+}
+.cat3 .imformation:last-child p:last-child{
+  width: 80vw;
+  line-height:1.3em;
+}
+
+
+/*１番下から2段目*/
+.bottom-contents{
+  padding:50px 0;
+  background-color:#8E8E8E;
+}
+.bottom-contents .container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.navigation{
+  width:80vw;
+  color:#fff;
+}
+.navigation p{
+  font-weight:bold;
+  padding-bottom: 10px;
+  line-height:1.3em;
+  border-bottom:1px solid #fff;
+}
+.navigation ul{
+  padding-top:28.5px;
+}
+.navigation li{
+  line-height:1.3em;
+}
+
+
+/*footer*/
+footer{
+padding:20px 0;
+  background-color:#6A6A6A;
+  color:#fff;
+}
+footer .container{
+  display: flex;
+  justify-content:space-around;
+}
+footer p:first-child{
+  font-size:20px;
+  font-family: 'Mansalva', cursive;
+}
+footer p:nth-child(2){
+  font-size:12px;
+}
+
+
+/*見出しと説明文のパララックス*/
+.left-pararax{
+  transform:translateX(-100px);/* 最初は元の位置より左にずらしておく */
+  opacity:0;  /* 最初は非表示にしておく */
+  transition:opacity 2s,transform 4s;/* 透明度と位置を設定 */
+}
+.right-pararax{
+  transform:translate(0,0);/* 最初は元の位置より右にずらしておく */
+  opacity:0;  /* 最初は非表示にしておく */
+  transition:opacity 2s,transform 4s;/* 透明度と位置を設定 */
+  
+}
+.left-fadein{
+  opacity:1;/* 表示させる */
+  transform:translateX(0); /* 位置を最初の位置に戻す */
+}
+.right-fadein{
+  opacity:1;/* 表示させる */
+  transform:translate(-20px, 0); /* 位置を最初の位置に戻す */
+  padding-left: 40px;
+}
+/*パララックスここまで*/
+
+
+/*画面をスクロールすると現れる追従ボタン*/
+body {
+  position: relative;
+}
+.floating {
+  position: fixed;
+  right: 25px;
+  bottom: 30px;
+  text-align: center;
+  width: 51px;
+  height: 47px;
+  padding-top: 5px;
+  border-radius:25px;
+  background: #393542;
+}
+.floating a {
+  display: block;
+  color: #fff;
+}
+/*追従ボタンはここまで*/
+
+
+/*タブレット画面*/
+@media screen and (min-width:768px){ 
+/*ヘッダー*/
+header p{
+  font-size: 50px;
+}
+header li{
+  font-size: 25px;
+}
+
+
+/*メイン*/
+.name p:first-child {
+  font-size: 40px;
+}
+.name p:nth-child(n+2) {
+font-size: 20px;
+}
+
+
+/*cat1*/
+.cat1 .container>p {
+  font-size: 40px;
+}
+.image-text p {
+  font-size: 25px;
+  margin-bottom: 80px;
+}
+
+
+/*cat2*/
+.right p, .left p {
+  font-size: 25px;
+}
+
+
+/*cat3*/
+.imformation{
+  border-top:1px solid #777;
+  padding:10px 0;
+  justify-content:center;
+}
+.imformation>p:nth-child(2){
+  margin-left:16px;
+  margin-right:37px;
+}
+.imformation p:last-child{
+  width: 60vw;
+}
+
+.cat3 .imformation:last-child p:last-child{
+  width: 60vw;
+}
+
+
+/*１番下から2段目*/
+.bottom-contents{
+  padding:50px 0;
+  background-color:#8E8E8E;
+}
+.bottom-contents .container{
+  display:flex;
+  justify-content:space-around;
+}
+.navigation{
+  width:25vw;
+  color:#fff;
+}
+.navigation p{
+  font-weight:bold;
+  padding-bottom: 10px;
+  line-height:1.3em;
+  border-bottom:1px solid #fff;
+}
+.navigation ul{
+  padding-top:28.5px;
+}
+.navigation li{
+  line-height:1.3em;
+}
+}
+
+
+@media screen and (min-width:1024px) { 
+  /*ヘッダー*/
+header .container{
+  justify-content:space-between;
+}
+header li{
+  font-size: 40px;
+}
+header p{
+  font-size: 80px;
+}
+
+
+/*メイン*/
+/*我輩は猫であるの所*/
+.name p:first-child{
+  font-size:50px;
+}
+.name p:nth-child(n+2){
+  font-size:20px;
+}
+
+
+/*cat1*/
+.cat1{
+  background-color:#FCF6F2;
+  padding:50px 0;
+}
+.cat1 .container>p{
+  font-size:50px;
+  font-weight:bold;
+  text-align: center;
+  font-family:ヒラギノ明朝 Pro;
+  margin-bottom: 60px;
+}
+
+.image-text{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-around;
+  flex-direction:row;
+}
+.cat1 .container img{
+  width:25vw;
+  display: block;
+  margin-bottom: 30px;
+}
+.image-text p{
+  width:30vw;
+  font-size:20px;
+  line-height:1.3em;
+}
+
+
+/*cat2*/
+.left-right{
+  display:flex;
+  justify-content:space-between;
+  max-width:850px;
+  flex-direction:row;
+  margin:0;
+}
+.right img,.left img{
+  width:25vw;
+}
+.right p,.left p{
+  width: 25vw;
+  margin-left: 100px;
+}
+.picture{
+  position:relative;
+}
+.picture>img{
+  width:100%;
+}
+.picture p{
+  width: 40vw;
+  position:absolute;
+  top:40vh;
+  left:45vw;
+  background-color:rgba(255,255,255,0.51);
+  font-size:20px;
+  line-height:1.3em;
+  padding: 4.5%;
+}
+
+
+/*cat3*/
+.cat3 .container>p{
+  font-size:50px;
+}
+.imformation {
+align-items:center;
+  justify-content: flex-start;
+}
+.imformation p:last-child {
+  width: 35vw;
+}
+.cat3 .imformation:last-child p:last-child{
+  width: 40vw;
+}
+
+
+/*１番下から2段目*/
+.bottom-contents .container{
+  display:flex;
+  justify-content:space-around;
+}
+.navigation{
+  width:15vw;
+  color:#fff;
+}
+.navigation p{
+  font-weight:bold;
+  padding-bottom: 10px;
+  line-height:1.3em;
+  border-bottom:1px solid #fff;
+}
+.navigation ul{
+  padding-top:28.5px;
+}
+.navigation li{
+  line-height:1.3em;
+}
+
+
+/*footer*/
+footer .container{
+  justify-content:space-between;
+  align-items:center;
+}
+footer p:first-child{
+  font-size: 30px;
+}
+footer p:nth-child(2) {
+  font-size: 15px;
+}
+
+
+/*見出しと説明文のパララックス*/
+.left-pararax{
+  transform:translateX(-100px);/* 最初は元の位置より左にずらしておく */
+  opacity:0;  /* 最初は非表示にしておく */
+  transition:opacity 2s,transform 5s;/* 透明度と位置を設定 */
+}
+.right-pararax{
+  transform:translate(100px,0);/* 最初は元の位置より右にずらしておく */
+  opacity:0;  /* 最初は非表示にしておく */
+  transition:opacity 2s,transform 5s;/* 透明度と位置を設定 */
+  
+}
+.left-fadein{
+  opacity:1;/* 表示させる */
+  transform:translateX(50px); /* 位置を最初の位置に戻す */
+}
+.right-fadein{
+  opacity:1;/* 表示させる */
+  transform:translate(-20px, 0); /* 位置を最初の位置に戻す */
+  padding-left: 40px;
+}
+/*パララックスここまで*/
+
+}
+
+
+
