@@ -16,39 +16,27 @@ header {
   width: 100%;
   z-index: 100;
 }
-
 header .container {
   background-color: rgba(228, 230, 235, 0.9);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   padding: 15px 0;
 }
-
 header .container ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 header .container li {
   font-size: 20px;
   margin-right: 10px;
 }
-
 header .container a {
   color: #fff;
 }
-
 header .container p {
   font-size: 40px;
   font-weight: bold;
-  font-family: 'Mansalva', cursive;
+  font-family: "Mansalva", cursive;
 }
 
 .first-view {
@@ -59,21 +47,18 @@ header .container p {
 .first-name {
   padding: 50px 20px;
 }
-
 .first-name__title {
   font-size: 30px;
   font-weight: bold;
   margin-left: 10px;
   font-family: ヒラギノ明朝 Pro;
 }
-
 .first-name__explain {
   margin-top: 50px;
   padding: 0 10px;
   color: #333;
   font-size: 15px;
 }
-
 .first-name p {
   line-height: 1.5em;
 }
@@ -82,89 +67,252 @@ header .container p {
   background-color: #FCF6F2;
   padding: 50px 20px;
 }
-
 .cat .center {
   text-align: center;
 }
-
 .cat__title {
   font-size: 30px;
   font-weight: bold;
   margin-left: 10px;
   font-family: ヒラギノ明朝 Pro;
 }
-
 .cat__explain {
   margin-top: 50px;
   padding: 0 10px;
   color: #333;
   font-size: 15px;
 }
-
 .cat p {
   line-height: 1.5em;
 }
-
 .cat .image-text {
   margin-top: 60px;
 }
-
 .cat .image-text__image {
   height: auto;
   display: block;
   margin: 0 auto;
 }
-
 .cat .image-text__text {
   font-size: 15px;
   line-height: 1.5em;
   margin: 0 auto;
 }
-
 .cat .image-text img {
   display: block;
 }
-
 .cat .image-text .turn1 {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
 }
-
 .cat .image-text .turn2 {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
-
 .cat .margin-top {
   margin-top: 100px;
 }
-
 .cat .image-top {
   margin-top: 20px;
 }
-
 .cat .text-top {
   margin-top: 20px;
 }
-
 .cat__information {
   border-top: 1px solid #777;
   padding: 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
-
 .cat__information > p:first-child {
   font-weight: bold;
 }
-
 .cat__information p:last-child {
   width: 350px;
+}
+.cat__information > p:nth-child(2) {
+  margin: 0 37px 10px 16px;
+  line-height: 16px;
+  height: 16px;
+  padding: 4px 26px 5px 26px;
+  border: 1px solid #AD2727;
+  color: #AD2727;
+}
+
+.big-picture--padding {
+  padding: 20px;
+  line-height: 1.5em;
+}
+
+.imformation-top {
+  margin-top: 20px;
+}
+
+.bottom-contents {
+  padding: 50px 20px;
+  background-color: #8E8E8E;
+}
+
+.bottom-contents .container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70vw;
+  margin: 0 auto;
+}
+.bottom-contents__explain {
+  width: 350px;
+  color: #fff;
+}
+.bottom-contents__explain p {
+  font-weight: bold;
+  padding-bottom: 10px;
+  line-height: 1.3em;
+  border-bottom: 1px solid #fff;
+  margin-top: 20px;
+}
+.bottom-contents__explain ul {
+  padding-top: 14px;
+}
+.bottom-contents__explain--list {
+  line-height: 1.3em;
+}
+
+/*画面をスクロールすると現れる追従ボタン*/
+body {
+  position: relative;
+}
+
+.floating {
+  position: fixed;
+  right: 25px;
+  bottom: 45px;
+  text-align: center;
+  width: 51px;
+  height: 47px;
+  padding-top: 5px;
+  border-radius: 25px;
+  background: #393542;
+}
+
+.floating a {
+  display: block;
+  color: #fff;
+}
+
+/*追従ボタンはここまで*/
+footer {
+  padding: 20px 0;
+  background-color: #6A6A6A;
+  color: #fff;
+}
+footer .container {
+  display: flex;
+  justify-content: space-around;
+}
+footer p:first-child {
+  font-size: 20px;
+  font-family: "Mansalva", cursive;
+}
+footer p:nth-child(2) {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .first-name__title {
+    font-size: 40px;
+  }
+  .first-name__explain {
+    font-size: 20px;
+  }
+
+  .cat__title {
+    font-size: 40px;
+  }
+  .cat .image-text__text {
+    font-size: 20px;
+  }
+  .cat__information p:last-child {
+    width: 450px;
+  }
+  .cat__information p {
+    font-size: 20px;
+  }
+
+  .big-picture--padding {
+    font-size: 20px;
+  }
+
+  .bottom-contents .container {
+    width: 75vw;
+    justify-content: space-between;
+  }
+  .bottom-contents__explain {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .container {
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0;
+  }
+  header .container li {
+    font-size: 40px;
+    margin-right: 20px;
+  }
+  header .container p {
+    font-size: 80px;
+  }
+
+  .first-view {
+    padding-top: 160px;
+  }
+
+  main .container {
+    width: 900px;
+    margin: 0 auto;
+  }
+  main .display-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  main .display-flex .image-text__image {
+    display: block;
+    width: 450px;
+  }
+  main .display-flex .image-text__text {
+    width: 350px;
+  }
+  main .display-flex .text-top {
+    margin-top: 0;
+  }
+  main .position-relative {
+    position: relative;
+  }
+  main .position-relative__absolute {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    position: absolute;
+    top: 300px;
+    right: 100px;
+  }
+  main .position-relative .big-picture__image {
+    height: 900px;
+    object-fit: cover;
+  }
+  main .bottom-contents .container {
+    justify-content: space-around;
+  }
+
+  footer .container {
+    align-items: center;
+  }
+  footer p:first-child {
+    font-size: 30px;
+  }
+  footer p:nth-child(2) {
+    font-size: 15px;
+  }
+}
